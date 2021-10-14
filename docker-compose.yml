@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  
+  seow-embedded-dev:
+    image: pcg/seow-embedded:dev
+    container_name: seow-embedded-dev
+    build: 
+      context: .
+    volumes:
+      - "$PWD:/app"
+    ports:
+      - "3000:80"

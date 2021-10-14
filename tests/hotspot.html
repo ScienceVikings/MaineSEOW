@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Hotspot image test</title>
+  <style>
+    html, body {
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .mapContainer {
+        display: flex;
+        align-items: middle;
+        justify-content: center;
+        margin: 0;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    #map{
+        align-self: center
+    } 
+  </style>
+</head>
+
+<body>
+    <div class="mapContainer" id="mapContainer">
+        <canvas id="map"></canvas>
+    </div>
+</body>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    // You will need the background of the map and an array of points of interest
+    // containing x and y coordinates relative to the map
+    const mapImageUrl = 'http://via.placeholder.com/500x300'
+    const dotRadius = 15;
+    const pointsOfInterest = [
+    {name:'point1', x:420, y:50}, 
+    {name:'point2', x:50, y:134},
+    {name:'point3', x:100, y:200}
+    ]
+
+    // get refference to the canvas and to its context
+    const mapContainer = document.getElementById('mapContainer');
+    const canvas = document.getElementById('map')
+    const ctx = canvas.getContext('2d');
+    canvas.width = 400;
+    canvas.height = 400;
+
+    // create a new image element that would hold your background
+    var mapImg = new Image();
+
+    // this block executes when the image is loaded
+    mapImg.onload = function () {
+    //setting the canvas size to the image size
+    canvas.width = mapImg.width;
+    canvas.height = mapImg.height;
+    //drawing the image to the canvas
+    ctx.drawImage(mapImg, 0, 0);
+    
+    //for each point draw a red dot positioned to pointsOfInterest[i].x, pointsOfInterest[i].y
+    //here you could alose use the point of interest name or whatever you have availible on your json
+    for(let i = 0; i < pointsOfInterest.length; i ++) {
+        // ctx.fillStyle = "red";
+        // ctx.beginPath();
+        // ctx.arc(pointsOfInterest[i].x, pointsOfInterest[i].y,dotRadius,0,2*Math.PI);
+        // ctx.stroke();
+        // ctx.fill();
+
+        let div = document.createElement('div');
+        div.style.height=dotRadius + 'px';
+        div.style.width=dotRadius + 'px';
+        div.style.background='red';
+        
+        div.style['border-radius'] = '50%';
+        div.style.display = 'inline-block';
+        div.style.position = 'absolute';
+        div.style.left = (canvas.offsetLeft + pointsOfInterest[i].x) + 'px';
+        div.style.top = (canvas.offsetTop + pointsOfInterest[i].y) + 'px';
+        div.id=`pin-${i}`;
+        mapContainer.appendChild(div);
+        tippy(`#${div.id}`,{
+            content: `I am pin #${i}`
+        });
+    }
+    
+    };
+    // set the url of the image, once loaded it will trigger image.onload
+    mapImg.src = mapImageUrl;
+</script>
+
+</html>
