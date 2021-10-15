@@ -53,37 +53,37 @@
 
     // this block executes when the image is loaded
     mapImg.onload = function () {
-    //setting the canvas size to the image size
-    canvas.width = mapImg.width;
-    canvas.height = mapImg.height;
-    //drawing the image to the canvas
-    ctx.drawImage(mapImg, 0, 0);
-    
-    //for each point draw a red dot positioned to pointsOfInterest[i].x, pointsOfInterest[i].y
-    //here you could alose use the point of interest name or whatever you have availible on your json
-    for(let i = 0; i < pointsOfInterest.length; i ++) {
-        // ctx.fillStyle = "red";
-        // ctx.beginPath();
-        // ctx.arc(pointsOfInterest[i].x, pointsOfInterest[i].y,dotRadius,0,2*Math.PI);
-        // ctx.stroke();
-        // ctx.fill();
-
-        let div = document.createElement('div');
-        div.style.height=dotRadius + 'px';
-        div.style.width=dotRadius + 'px';
-        div.style.background='red';
+        //setting the canvas size to the image size
+        canvas.width = mapImg.width;
+        canvas.height = mapImg.height;
+        //drawing the image to the canvas
+        ctx.drawImage(mapImg, 0, 0);
         
-        div.style['border-radius'] = '50%';
-        div.style.display = 'inline-block';
-        div.style.position = 'absolute';
-        div.style.left = (canvas.offsetLeft + pointsOfInterest[i].x) + 'px';
-        div.style.top = (canvas.offsetTop + pointsOfInterest[i].y) + 'px';
-        div.id=`pin-${i}`;
-        mapContainer.appendChild(div);
-        tippy(`#${div.id}`,{
-            content: `I am pin #${i}`
-        });
-    }
+        //for each point draw a red dot positioned to pointsOfInterest[i].x, pointsOfInterest[i].y
+        //here you could alose use the point of interest name or whatever you have availible on your json
+        for(let i = 0; i < pointsOfInterest.length; i ++) {
+            // ctx.fillStyle = "red";
+            // ctx.beginPath();
+            // ctx.arc(pointsOfInterest[i].x, pointsOfInterest[i].y,dotRadius,0,2*Math.PI);
+            // ctx.stroke();
+            // ctx.fill();
+
+            let div = document.createElement('div');
+            div.style.height=dotRadius + 'px';
+            div.style.width=dotRadius + 'px';
+            div.style.background='red';
+            
+            div.style['border-radius'] = '50%';
+            div.style.display = 'inline-block';
+            div.style.position = 'absolute';
+            div.style.left = (canvas.offsetLeft + pointsOfInterest[i].x) + 'px';
+            div.style.top = (canvas.offsetTop + pointsOfInterest[i].y) + 'px';
+            div.id=`pin-${i}`;
+            mapContainer.appendChild(div);
+            tippy(`#${div.id}`,{
+                content: `I am pin #${i}`
+            });
+        }
     
     };
     // set the url of the image, once loaded it will trigger image.onload

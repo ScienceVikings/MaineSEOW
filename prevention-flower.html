@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="">
+<head>
+    <link rel="stylesheet" href="css/embed.css"> 
+    <link rel="stylesheet" href="css/hotspot.css"> 
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>    
+</head>
+<body>
+    <div class="hidden" id="assessment">
+        <strong>Assessment</strong> - Community partners conduct assessments every 2 years and upon new funding; alcohol and marijuana and the need to address shared risk and protective factors are top concerns
+    </div>
+    <div class="hidden" id="capacity">
+        <strong>Capacity</strong> - State level infrastructure and support<br/>
+        20 community partners;<br/>
+        32 Certified prevention specialists<br/>
+        600 Active Collaborators<br/>
+        16 Counties; 9 PHDs
+    </div>
+    <div class="hidden" id="planning">
+        <strong>Planning</strong> – 20 Community-level Comprehensive SUP Workplans
+    </div>
+    <div class="hidden" id="implementation">
+        <strong>Implementation</strong> – 5 state-level interventions implemented<br/>
+        45 community-level interventions implemented<br/>
+        1.4M people served
+    </div>
+    <div class="hidden" id="evaluation">
+        <strong>Evaluation</strong> – State and community-level initiatives are evaluated, and results inform continuous quality improvement
+    </div>
+    <div class="hidden" id="center">
+        The five steps are embedded in two guiding principles: prevention programs need to be sustainable such that they can adapt and achieve desired long-term outcomes; and individuals and organizations need to be culturally competent so as to interact with members of diverse population groups.
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="js/hotspot.js"></script>
+    <script>
+        console.log(Hotspot.usage());
+
+        const capacity = ""
+        const flower = Hotspot.addPins({
+            imageUrl: '/img/prevention-flower.png',
+            pins: [
+                { x:552, y: 276, content: document.getElementById('capacity').innerHTML},
+                { x:348, y: 121, content: document.getElementById('assessment').innerHTML},
+                { x:459, y: 488, content: document.getElementById('planning').innerHTML},
+                { x:233, y: 468, content: document.getElementById('implementation').innerHTML},
+                { x:160, y: 250, content: document.getElementById('evaluation').innerHTML},
+                { x:352, y: 396, content: document.getElementById('center').innerHTML}
+            ],
+            pinColor: 'rgb(165, 97, 214)'
+        });
+        document.body.appendChild(flower);
+    </script>    
+</body>
+
+</html>

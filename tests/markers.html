@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="">
+<head>
+    <link rel="stylesheet" href="/css/hotspot.css"> 
+</head>
+<body>
+    Change the image URL to mark it up.
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="/js/hotspot.js"></script>
+    <script>
+        console.log(Hotspot.usage());
+        const flower = Hotspot.addPins({
+            imageUrl: '/img/prevention-flower.png',
+            pins: [
+                {x: 50, y: 50, content:"This is a test"},
+                {"x":567,"y":286,content:"Capacity"},
+                { x:348, y: 121, content: '<strong>Assessment</strong> - Community partners conduct assessments every 2 years and upon new funding; alcohol and marijuana and the need to address shared risk and protective factors are top concerns'}
+            ]
+        });
+        document.body.appendChild(flower);
+
+
+        Hotspot.markPins();
+        
+    </script>    
+</body>
+
+</html>
