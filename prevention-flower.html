@@ -4,35 +4,93 @@
     <link rel="stylesheet" href="css/embed.css"> 
     <link rel="stylesheet" href="css/hotspot.css"> 
     <style>
+        h3 {
+            text-align: center;
+        }
         .hidden {
             display: none;
+        }
+        #content {
+            overflow-wrap: break-word;
+            text-transform: none;
+            letter-spacing: normal;
+            display: flex;
+        }
+        .text {
+            color: rgb(0, 0, 0);
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28.8px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 16px;
+            
+            
+        }
+        .header-bold {
+            color: rgb(0, 0, 0);
+            font-family: Poppins;
+            font-size: 28.7px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 38.25px;
+        }
+        .header {
+            color: rgb(0, 0, 0);
+            font-family: Poppins;
+            font-size: 28.7px;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 38.25px;
         }
     </style>    
 </head>
 <body>
     <div class="hidden" id="assessment">
-        <strong>Assessment</strong> - Community partners conduct assessments every 2 years and upon new funding; alcohol and marijuana and the need to address shared risk and protective factors are top concerns
+        <strong>Assessment</strong> – (FFY16-21)<br/>
+        Community partners conduct formal assessments every 2 years, upon new funding and ongoing as part of the SPF.<br/>
+        Alcohol and marijuana and the need to address shared risk and protective factors are top concerns.
     </div>
     <div class="hidden" id="capacity">
-        <strong>Capacity</strong> - State level infrastructure and support<br/>
-        20 community partners;<br/>
-        32 Certified prevention specialists<br/>
-        600 Active Collaborators<br/>
-        16 Counties; 9 PHDs
+        <strong>Capacity</strong> – State-level infrastructure and support<br/>
+        20 community partners (FFY21)<br/>
+        32 Certified prevention specialists (FFY21)<br/>
+        739 Active Collaborators (FFY21)<br/>
+        16 Counties; 9 PHDs (FFY21)<br/>
+        2,135 instances of technical assistance and trainings (FFY16-FFY21)
     </div>
     <div class="hidden" id="planning">
-        <strong>Planning</strong> – 20 Community-level Comprehensive SUP Workplans
+        <strong>Planning</strong> – 20 Community-level Comprehensive SUP Workplans created 
     </div>
     <div class="hidden" id="implementation">
-        <strong>Implementation</strong> – 5 state-level interventions implemented<br/>
-        45 community-level interventions implemented<br/>
-        1.4M people served
+        <strong>Implementation</strong> – (FFY16-21)<br/>
+        5 state-level interventions implemented<br/>
+        63 community-level interventions implemented<br/>
+        25 M distinct times youth and adults reached by substance use prevention interventions
     </div>
     <div class="hidden" id="evaluation">
-        <strong>Evaluation</strong> – State and community-level initiatives are evaluated, and results inform continuous quality improvement
+        <strong>Evaluation</strong> – (FFY16-21)<br/>
+        State and community-level initiatives are evaluated, and results inform continuous quality improvement
     </div>
     <div class="hidden" id="center">
         The five steps are embedded in two guiding principles: prevention programs need to be sustainable such that they can adapt and achieve desired long-term outcomes; and individuals and organizations need to be culturally competent so as to interact with members of diverse population groups.
+    </div>
+    <div id="content">
+        <div class="prevention" style="width:50%;">
+            <h4>
+                <em class="header-bold">SAMHSA’s</em>
+                <em class="header">
+                    Strategic Prevention Framework (SPF)
+                </em>
+                
+            </h4>
+            <p class="text">
+                SPF aims to build state and local capacity to decrease substance use through the use of data-driven decision making. The SPF model involves the following state- and community-level processes. The five steps are embedded in two guiding principles: prevention programs need to be sustainable such that they can adapt and achieve desired long-term outcomes; and individuals and organizations need to be culturally competent so as to interact with members of diverse population groups. As the diagram on the right suggests, SPF is not a linear process but rather a dynamic, circular one in which there is continual assessment, evaluation and adjustment.
+            </p>
+        </div>
     </div>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
@@ -40,20 +98,31 @@
     <script>
         console.log(Hotspot.usage());
 
+        const oldFlowerPins = [
+            { x:552, y: 276, content: document.getElementById('capacity').innerHTML},
+            { x:348, y: 121, content: document.getElementById('assessment').innerHTML},
+            { x:459, y: 488, content: document.getElementById('planning').innerHTML},
+            { x:233, y: 468, content: document.getElementById('implementation').innerHTML},
+            { x:160, y: 250, content: document.getElementById('evaluation').innerHTML},
+            { x:352, y: 396, content: document.getElementById('center').innerHTML}
+        ];
+
+        const flowerPins = [
+            { x:288, y: 134, content: document.getElementById('capacity').innerHTML},
+            { x:182, y: 33, content: document.getElementById('assessment').innerHTML},
+            { x:65, y: 103, content: document.getElementById('evaluation').innerHTML},
+            { x:175, y: 122, content: document.getElementById('center').innerHTML},
+            { x:107, y: 271, content: document.getElementById('implementation').innerHTML},
+            { x:238, y: 292, content: document.getElementById('planning').innerHTML}
+        ];
+
         const capacity = ""
         const flower = Hotspot.addPins({
             imageUrl: 'img/prevention-flower.png',
-            pins: [
-                { x:552, y: 276, content: document.getElementById('capacity').innerHTML},
-                { x:348, y: 121, content: document.getElementById('assessment').innerHTML},
-                { x:459, y: 488, content: document.getElementById('planning').innerHTML},
-                { x:233, y: 468, content: document.getElementById('implementation').innerHTML},
-                { x:160, y: 250, content: document.getElementById('evaluation').innerHTML},
-                { x:352, y: 396, content: document.getElementById('center').innerHTML}
-            ],
+            pins: flowerPins,
             pinColor: 'rgb(165, 97, 214)'
         });
-        document.body.appendChild(flower);
+        document.getElementById('content').appendChild(flower);
     </script>    
 </body>
 

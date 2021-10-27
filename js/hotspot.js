@@ -20,7 +20,7 @@
         div.id = `pin-${pin.x}-${pin.y}`;
         div.className = 'pin';
         div.innerHTML="<strong>+</strong>";
-
+        
         div.style.height = options.pinRadius + 'px';
         div.style.width = options.pinRadius + 'px';
         div.style.background = options.pinColor;
