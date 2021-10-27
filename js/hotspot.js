@@ -26,6 +26,7 @@
         div.style.background = options.pinColor;
         div.style.left = (canvasOffsetLeft + pin.x) + 'px';
         div.style.top = (canvasOffsetTop + pin.y) + 'px';
+        div.style.cursor = 'pointer';
         
         win.setTimeout(()=>{
             tippy(`#${div.id}`,{
