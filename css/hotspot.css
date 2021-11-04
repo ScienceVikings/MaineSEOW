@@ -17,12 +17,12 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    animation-duration: 0.5s;
-    animation-name: pin-throb;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
     color: whitesmoke;
     border: 1px whitesmoke solid;
+    /* animation-duration: 0.5s;
+    animation-name: pin-throb;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
 }
 
 @keyframes pin-throb {

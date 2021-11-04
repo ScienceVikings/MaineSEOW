@@ -31,7 +31,8 @@
         win.setTimeout(()=>{
             tippy(`#${div.id}`,{
                 content: pin.content,
-                allowHTML: true
+                allowHTML: true,
+                trigger: 'mouseenter click'
             });
         },0);
 
