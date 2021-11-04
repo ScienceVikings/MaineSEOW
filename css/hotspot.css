@@ -19,6 +19,7 @@
     position: absolute;
     color: whitesmoke;
     border: 1px whitesmoke solid;
+    font-weight: lighter;
     /* animation-duration: 0.5s;
     animation-name: pin-throb;
     animation-iteration-count: infinite;
