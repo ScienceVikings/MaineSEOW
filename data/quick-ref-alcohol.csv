@@ -1,0 +1,39 @@
+Population,Source,Type,Indicator,Year(s),Aroostook,Central ,Cumberland,Downeast,Midcoast,Penquis,Western,York,Maine
+7th - 8th Grade,MIYHS,Consumption,Past 30 day alcohol use (any) among 7th and 8th grade,2017,5.6,3.9,3.1,3.4,4.3,3.3,4.3,3.3,3.7
+7th - 8th Grade,MIYHS,Consumption,Past 30 day alcohol use (any) among 7th and 8th grade,2019,5,4.7,3.4,4.4,4,4,4.7,3.5,4
+9th - 12th Grade,MIYHS,Consumption,Past 30 day alcohol use (any) among high school,2017,23,21,24,24,21,20,23,23,23
+9th - 12th Grade,MIYHS,Consumption,Past 30 day alcohol use (any) among high school,2019,21,21,24,25,25,19,22,24,23
+9th - 12th Grade,MIYHS,Consumption,"Past 30 day binge alcohol use, of those who drank within the past 30 days, among high school",2017,42,36,36,32,37,38,35,32,35
+9th - 12th Grade,MIYHS,Consumption,"Past 30 day binge alcohol use, of those who drank within the past 30 days, among high school",2019,37,35,34,35,35,28,30,31,33
+9th - 12th Grade,MIYHS,Contributing Factor,Students who thought binge drinking once or twice a week was NOT risky,2017,22,19,16,20,18,19,20,18,18
+9th - 12th Grade,MIYHS,Contributing Factor,Students who thought binge drinking once or twice a week was NOT risky,2019,18,20,16,22,19,18,19,18,18
+9th - 12th Grade,MIYHS,Contributing Factor,Students who thought drinking 1 or 2 alcoholic drinks every day was NOT harmful,2017,44,40,37,43,40,44,40,40,40
+9th - 12th Grade,MIYHS,Contributing Factor,Students who thought drinking 1 or 2 alcoholic drinks every day was NOT harmful,2019,43,39,37,46,39,40,40,39,39
+9th - 12th Grade,MIYHS,Contributing Factor,Students who felt they would NOT be caught by parents for drinking,2017,44,46,52,50,48,46,48,49,49
+9th - 12th Grade,MIYHS,Contributing Factor,Students who felt they would NOT be caught by parents for drinking,2019,45,47,53,50,53,48,49,50,50
+9th - 12th Grade,MIYHS,Contributing Factor,Students who agreed that their family has clear rules at home about drugs and alcohol,2017,93,92,91,92,91,92,90,91,91
+9th - 12th Grade,MIYHS,Contributing Factor,Students who agreed that their family has clear rules at home about drugs and alcohol,2019,92,91,90,90,89,92,89,92,90
+9th - 12th Grade,MIYHS,Contributing Factor,Students who felt their parents would NOT feel it would be wrong for their child to consume 1 or 2 drinks of an alcoholic beverage nearly every day,2017,7.7,6.8,5.7,7.9,6.6,7,7.9,6.2,6.8
+9th - 12th Grade,MIYHS,Contributing Factor,Students who felt their parents would NOT feel it would be wrong for their child to consume 1 or 2 drinks of an alcoholic beverage nearly every day,2019,6.7,6.6,5.2,7,6.2,5.9,6.9,5.8,6.1
+Parents of 7th-12th ,Parent Survey,None,Parents who believe it would be risky for their child to drink 1 or 2 alcoholic drinks nearly everyday,2019,78,85.3,84,76,74,81.3,82,79.4,80
+Parents of 7th-12th ,Parent Survey,None,Parents who believe it would be risky for their child to drink 1 or 2 alcoholic drinks nearly everyday,2021,89,85,82.2,82.3,82.8,74.8,83,80,82.4
+All Ages,BABLO,None,"Number of active liquor licensees per 10,000 residents (on and off-premise)",2021,0.45,1.62,2.78,2.43,2.80,1.60,1.48,1.59,1.96
+All Ages,BABLO,None,"Number of active liquor licensees per 10,000 residents (on and off-premise)",2022,0.75,1.56,2.92,2.78,3.20,1.78,1.53,1.88,2.14
+18 to 20,BRFSS,Consumption,Past 30 day alcohol use (any) among 18 to 20 ,2015-18,34,31,51,27,38,48,35,53,43
+18 to 25,BRFSS,Consumption,Past 30 day binge drinking among 18 to 25,2016-19,50,41,48,26,37,47,43,56,45
+18 to 25,BRFSS,Consumption,Past 30 day binge drinking among 18 to 25,2015-18,29,36,44,50,29,42,34,49,40
+18 to 20,BRFSS,Consumption,Past 30 day alcohol use (any) among 18 to 20 ,2016-19,20,45,46,45,26,40,34,45,39
+12 to 20 ,NSDUH,Consumption,Past 30 day alcohol use (any) among 12 to 20,2014-16,23,25,27,23,24,28,24,25,25
+12 to 20 ,NSDUH,Consumption,Past 30 day alcohol use (any) among 12 to 20,2016-18,24,24,26,21,22,25,22,24,24
+12+,NSDUH,Consumption,Alcohol use disorder in the past year among 12+,2014-16,4.5,5.2,6,5,5.2,5.1,5.2,5.4,5.3
+12+,NSDUH,Consumption,Alcohol use disorder in the past year among 12+,2016-18,5,5.6,6.5,5.7,5.2,5.7,6.3,6.3,5.9
+12+,PRAMS,Consumption,Alcohol use during last three months of pregnancy,2017-19,7.1,10.1,17.6,10.1,14.5,8.2,9,9.3,11.6
+12+,PRAMS,Consumption,Alcohol use during last three months of pregnancy,2018-20,,11.8,16.1,11.3,13.9,7.7,8.4,8.9,11.4
+All Ages,DPS-UCR,Consequence,"Alcohol-related arrest rate per 10,000 residents ",2018-19,46.2,56.4,87.6,40.4,51.9,39.6,40.2,61.0,57.4
+All Ages,DPS-UCR,Consequence,"Alcohol-related arrest rate per 10,000 residents ",2019-20,25.9,49.3,42.3,32.6,41.2,32.1,33.3,47.5,41.2
+All Ages,EMS,Consequence,"EMS overdose responses related to alcohol per 10,000 residents",2020,12.5,20.4,21.5,10.5,11.6,17.0,24.4,17.7,18.4
+All Ages,EMS,Consequence,"EMS overdose responses related to alcohol per 10,000 residents",2021,13.3,22.1,21.5,14.6,13.5,18.4,22.8,24.6,20.1
+All Ages,CDC Syndromic,Consequence,"ED visits related to alcohol per 10,000 residents",2020,99.5,143.2,161.1,113.2,130.2,127.8,204.0,90.0,140.3
+All Ages,CDC Syndromic,Consequence,"ED visits related to alcohol per 10,000 residents",2021,91.4,140.6,155.1,95.6,116.8,128.3,200.2,95.7,136.0
+All Ages,MDOT,Consequence,"Number of alcohol and/or drug related crashes per 10,000 residents",2019-20,6.2,9.5,9.1,10.4,11.3,8.2,9.3,10.5,9.5
+All Ages,MDOT,Consequence,"Number of alcohol and/or drug related crashes per 10,000 residents",2020-21,5.7,10.4,9.2,9.6,12.1,8.5,10.5,11.1,9.9

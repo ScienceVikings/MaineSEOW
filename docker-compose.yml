@@ -10,3 +10,14 @@ services:
       - "$PWD:/app"
     ports:
       - "3000:80"
+
+  cli:
+    image: pcg/seow-embedded:dev
+    container_name: seow-embedded-dev
+    entrypoint: /bin/bash
+    build: 
+      context: .
+    volumes:
+      - "$PWD:/app"
+    ports:
+      - "3000:80"
