@@ -3,49 +3,55 @@ const languageList = JSON.parse("[{\"language\":\"Afrikaans\",\"languageCode\":\
 
 (async (win,vue,languageList)=>{
 
-    if(win.location.origin.includes(".goog")){
-        //Only bother if we're not already translating things
-        return;
+
+    win.SVL = win.SVL || {};
+    win.SVL.Translator = {};
+
+    win.SVL.Translator.install = async function(baseUrl,translateUrl,replaceString="{code}"){
+        
+        if(win.location.origin.includes(".goog")){
+            //Only bother if we're not already translating things
+            return;
+        }
+    
+        var response = await fetch(`${baseUrl}/templates/translator.html`);
+        var reader = await response.body.getReader();
+        var template = String.fromCharCode(...(await reader.read()).value);
+    
+        var newTranslator = win.document.createElement("div");
+        newTranslator.id = "translator";
+        newTranslator.style.position = "fixed";
+        newTranslator.style.bottom= "15px"; 
+        newTranslator.style.right= "15px";
+    
+        win.document.body.appendChild(newTranslator);
+    
+        vue.createApp({
+            data(){
+                return {
+                    ButtonText: "Translate",
+                    LanguageList: languageList,
+                    SearchPlaceholderText: "Filter languages",
+                    filteredLanguage: ""
+                }
+            },
+            methods:{
+                languageUrl(lang) {
+                    return translateUrl.replace(replaceString,lang.languageCode);
+                },
+                filterLanguages(){
+                    if(this.filteredLanguage.trim() == ""){
+                        this.LanguageList = languageList;
+                    }
+                    
+                    this.LanguageList = languageList.filter(x=>x.language.toLowerCase().includes(this.filteredLanguage.toLowerCase()));
+                }
+            },
+            template: template
+        }).mount('#translator');
     }
 
-    const urlBase = `https://www-maineseow-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp`;
-    var response = await fetch(`${win.location.origin}/templates/translator.html`);
-    var reader = await response.body.getReader();
-    var template = String.fromCharCode(...(await reader.read()).value);
-
-    var newTranslator = win.document.createElement("div");
-    newTranslator.id = "translator";
-    newTranslator.style.position = "fixed";
-    newTranslator.style.bottom= "15px"; 
-    newTranslator.style.right= "15px";
-
-    win.document.body.appendChild(newTranslator);
-
-    vue.createApp({
-        data(){
-            return {
-                ButtonText: "Translate",
-                LanguageList: languageList,
-                SearchPlaceholderText: "Filter languages",
-                filteredLanguage: ""
-            }
-        },
-        methods:{
-            languageUrl(lang) {
-                return `https://www-maineseow-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=${lang.languageCode}&_x_tr_hl=en&_x_tr_pto=wapp`
-            },
-            filterLanguages(){
-
-                console.log("Here we go");
-                if(this.filteredLanguage.trim() == ""){
-                    this.LanguageList = languageList;
-                }
-                
-                this.LanguageList = languageList.filter(x=>x.language.toLowerCase().includes(this.filteredLanguage.toLowerCase()));
-            }
-        },
-        template: template
-    }).mount('#translator');
+    
     
 })(window,Vue,languageList);
 
