@@ -8,7 +8,7 @@ const languageList = JSON.parse("[{\"language\":\"Afrikaans\",\"languageCode\":\
     win.SVL.Translator = {};
 
     win.SVL.Translator.install = async function(baseUrl,translateUrl,replaceString="{code}"){
-        
+
         if(win.location.origin.includes(".goog")){
             //Only bother if we're not already translating things
             return;
@@ -23,6 +23,7 @@ const languageList = JSON.parse("[{\"language\":\"Afrikaans\",\"languageCode\":\
         newTranslator.style.position = "fixed";
         newTranslator.style.bottom= "15px"; 
         newTranslator.style.right= "15px";
+        newTranslator.style['z-index'] = "10000";
     
         win.document.body.appendChild(newTranslator);
     
