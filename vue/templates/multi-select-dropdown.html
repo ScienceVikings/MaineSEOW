@@ -1,0 +1,21 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="{{ id }}" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ label }}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="{{ id }}">
+        <li v-if="filteredValues.length > 0">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="{{ id }}-all" 
+                    @change="selectAllItems" v-model="defaultAll" />
+                <label class="form-check-label" for="{{ id }}-all">All</label>
+            </div>
+        </li>
+        <li v-for="val in filteredValues" v-if="filteredValues.length > 0">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="{{ id }}-{{ val[valueKey] }}" 
+                    @change="selectedItem" v-model="selectedValues" :value="val[valueKey]" />
+                <label class="form-check-label" for="{{ id }}-{{ val[valueKey] }}">{{ val[displayKey] }}</label>
+            </div>
+        </li>
+    </ul>
+</div>

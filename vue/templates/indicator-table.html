@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th v-for="field in otherFields">
+                {{ field }}
+            </th>
+            <th v-for="location in locations">
+                {{ location }}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="indicator in indicators">
+            <td v-for="field in otherFields">
+                {{ indicator[field] }}
+            </td>
+            <td v-for="location in locations">
+                {{ indicator[location] }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
