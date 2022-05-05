@@ -62,9 +62,9 @@
     <script src="https://sciencevikinglabs.com/MaineSEOW/vue/indicator-table.js"></script>
     <script>
         
-        const baseUrl = window.location.origin;
+        const baseUrl = "https://sciencevikinglabs.com/MaineSEOW/";//window.location.origin;
 
-        let dataPromise = fetch(`data/quick-ref-alcohol.json`).then((resp)=> resp.json());
+        let dataPromise = fetch(`${baseUrl}/data/quick-ref-alcohol.json`).then((resp)=> resp.json());
 
         const app = Vue.createApp({
             inject: [
