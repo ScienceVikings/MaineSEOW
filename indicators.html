@@ -17,30 +17,40 @@
 <body>
     <div id="content">
         
-        <MultiSelectDropdown :label='"Population"' :display-key='"display"' :value-key='"value"' 
-            :default-all="true" :values="allPopulations" 
-            @values-changed="updateSelectedPopulations">
-        </MultiSelectDropdown>
-
-        <MultiSelectDropdown :label='"Sources"' :display-key='"display"' :value-key='"value"' 
-            :default-all="true" :values="allSources" 
-            @values-changed="updateSelectedSources">
-        </MultiSelectDropdown>
-
-        <MultiSelectDropdown :label='"Types"' :display-key='"display"' :value-key='"value"' 
-            :default-all="true" :values="allTypes" 
-            @values-changed="updateSelectedTypes">
-        </MultiSelectDropdown>
-
-        <MultiSelectDropdown :label='"Years"' :display-key='"display"' :value-key='"value"' 
-            :default-all="true" :values="allYears" 
-            @values-changed="updateSelectedYears">
-        </MultiSelectDropdown>
-
-        <MultiSelectDropdown :label='"Locations"' :display-key='"display"' :value-key='"value"'
-            :values="locationDropdownItems" 
-            @values-changed="updateSelectedLocations">
-        </MultiSelectDropdown>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <MultiSelectDropdown :label='"Population"' :display-key='"display"' :value-key='"value"' 
+                        :default-all="true" :values="allPopulations" 
+                        @values-changed="updateSelectedPopulations">
+                    </MultiSelectDropdown>
+                </div>
+                <div class="col">
+                    <MultiSelectDropdown :label='"Sources"' :display-key='"display"' :value-key='"value"' 
+                        :default-all="true" :values="allSources" 
+                        @values-changed="updateSelectedSources">
+                    </MultiSelectDropdown>
+                </div>
+                <div class="col">
+                    <MultiSelectDropdown :label='"Types"' :display-key='"display"' :value-key='"value"' 
+                        :default-all="true" :values="allTypes" 
+                        @values-changed="updateSelectedTypes">
+                    </MultiSelectDropdown>
+                </div>
+                <div class="col">
+                    <MultiSelectDropdown :label='"Years"' :display-key='"display"' :value-key='"value"' 
+                        :default-all="true" :values="allYears" 
+                        @values-changed="updateSelectedYears">
+                    </MultiSelectDropdown>
+                </div>
+                <div class="col">
+                    <MultiSelectDropdown :label='"Locations"' :display-key='"display"' :value-key='"value"'
+                        :values="locationDropdownItems" :default-all="true"
+                        @values-changed="updateSelectedLocations">
+                    </MultiSelectDropdown>
+                </div>
+            </div>
+        </div>
 
         <IndicatorTable :locations="selectedLocations" :indicators="filteredIndicators"></IndicatorTable>
         

@@ -11,8 +11,6 @@
       },
       data() {
         return {
-          _____indicators: [],
-          ___locations: ["Aroostook","Central","Cumberland","Downeast","Midcoast","Penquis","Western","York","Maine"],
           otherFields: ["Population","Source","Type","Indicator","Year(s)"]
         }
       },

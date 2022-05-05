@@ -28,7 +28,8 @@
     <h2>
         Translation
     </h2>
-
+    <iframe src="translator.html" title="Translation Test" style="position:absolute; right: 5px; border: none;overflow:hidden;width: 200px; max-width: 200px; height: 250px; max-height: 250px;"></iframe>
+    <pre>&lt;iframe src=&quot;translator.html&quot; title=&quot;Translation Test&quot; style=&quot;position:absolute; right: 5px; border: none;overflow:hidden;width: 200px; max-width: 200px; height: 250px; max-height: 250px;&quot;&gt;&lt;/iframe&gt;</pre>
     <div id="dropdown"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -37,29 +38,26 @@
     <script src="vue/svl.js"></script>
     <script src="vue/multi-select-dropdown.js"></script>
     <script>
-        var baseUrl = window.location;
-        var translateUrl = "https://www-maineseow-com.translate.goog/?_x_tr_sl=en&_x_tr_tl={code}&_x_tr_hl=en&_x_tr_pto=wapp"
-        await window.SVL.Translator.install(baseUrl,translateUrl);
 
-        const MultiSelectDropdown = window.SVL.Components['multi-select-dropdown'];
+        // const MultiSelectDropdown = window.SVL.Components['multi-select-dropdown'];
 
-        Vue.createApp({
-            components:{
-                MultiSelectDropdown
-            },
-            data(){
-                return {
-                    selectedItems: [],
-                    dropdownValues: [
-                        {display: "HELLO", value:"1"}
-                    ]
-                }
-            },
-            methods:{
+        // Vue.createApp({
+        //     components:{
+        //         MultiSelectDropdown
+        //     },
+        //     data(){
+        //         return {
+        //             selectedItems: [],
+        //             dropdownValues: [
+        //                 {display: "HELLO", value:"1"}
+        //             ]
+        //         }
+        //     },
+        //     methods:{
                 
-            },
-            template: `<MultiSelectDropdown :label="Test Dropdown" :id="test-dropdown" :displayKey="display" :valueKey="value" :values="dropdownValues" :selectedValues="selectedItems" />`
-        }).mount('#dropdown');
+        //     },
+        //     template: `<MultiSelectDropdown :label="Test Dropdown" :id="test-dropdown" :displayKey="display" :valueKey="value" :values="dropdownValues" :selectedValues="selectedItems" />`
+        // }).mount('#dropdown');
 
     </script>
 </body>
